@@ -25,17 +25,12 @@ playButton.addEventListener('click', function(){
         
                 const cell = getCell();
         
+                // Calcolo quante celle ci stanno in ogni lato del contenitore in base alla difficoltà
+                let side = Math.sqrt(difficulty);
+
                 // In base alla difficoltà cambiano anche le dimensioni della cella
-                if(difficulty==100) {
-                    cell.style.width = "calc(100% / 10)"
-                    cell.style.height = "calc(100% / 10)"
-                } else if(difficulty==81) {
-                    cell.style.width = "calc(100% / 9)"
-                    cell.style.height = "calc(100% / 9)"
-                } else if(difficulty==49) {
-                    cell.style.width = "calc(100% / 7)"
-                    cell.style.height = "calc(100% / 7)"
-                }
+                    cell.style.width = `calc(100% / ${side})`
+                    cell.style.height = `calc(100% / ${side})`
                 
                 // Aggiungo il numero alla cella
                 cell.innerHTML = i;
