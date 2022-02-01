@@ -49,19 +49,20 @@ main {
 }
 
 #gridContainer {
-    height: 700px;
-    width: 700px;
+    height: 70vmin;
+    width: 70vmin;
     display: flex;
     flex-wrap: wrap;
 }
 
 .cell {
     border: 2px solid #000;
-    font-size: 2rem;
+    font-size: 1.2rem;
     display: flex;
     justify-content: center;
     cursor: pointer;
     align-items: center;
+    transition: 200ms;
 }
 
 .cell.clicked {
@@ -75,4 +76,8 @@ main {
 
 .cell.clicked:hover {
     background-color: #6495ed;
+}
+
+.cell.bomb {
+    background-color: #dc143c;
 }
